@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CompanyContent from '../../components/companies/CompanyContent'
+import ResultsList from '../results/ResultsList'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { getCompany } from '../../actions/companies'
@@ -18,10 +19,15 @@ class CompanyDetail extends Component {
 		}
 	}
 
+	renderResultsList() {
+		return <ResultsList companyId={this.props.match.params.id}/>
+	}
+
 	render() {
 		return (
 			<div>
 				{this.renderCompanyContent()}
+				{this.renderResultsList()}
 			</div>
 		)
 	}
