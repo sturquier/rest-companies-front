@@ -1,3 +1,3 @@
-export const GET_COMPANIES
-export const GET_COMPANY
-export const GET_COMPANY_RESULTS
+export const GET_COMPANIES = 'GET_COMPANIES'
+export const GET_COMPANY = 'GET_COMPANY'
+export const GET_COMPANY_RESULTS = 'GET_COMPANY_RESULTS'

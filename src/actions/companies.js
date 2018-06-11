@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { GET_COMPANIES, GET_COMPANY, GET_COMPANY_RESULTS } from '../constants/ActionTypes'
-require('dotenv').config()
-const API_ENDPOINT = process.env.API_ENDPOINT;
+
+const API_ENDPOINT = "http://localhost:8080"
 
 export function getCompanies() {
 	return function(dispatch) {
@@ -25,7 +25,7 @@ export function getCompany(id) {
 	}
 }
 
-export function getCompanyResults() {
+export function getCompanyResults(id) {
 	return function(dispatch) {
 		axios.get(`${API_ENDPOINT}/companies/${id}/results`).then((response) => {
 			dispatch({
