@@ -16,9 +16,6 @@ const CompanyContent = ({company}) => {
 
 			<hr/>
 
-			<section>
-				<h5>Results</h5>
-			</section>
 		</div>
 	)
 }
