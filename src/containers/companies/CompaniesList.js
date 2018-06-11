@@ -10,12 +10,32 @@ class CompaniesList extends Component {
 		this.props.getCompanies()
 	}
 
+	renderCompanies() {
+		const {companies} = this.props
+
+		return companies.map((data) => {
+			return <CompaniesListItem key={data.id} company={data}/>
+		})
+	}
+
 	render() {
-		console.log(this.props.companies)
 		return (
 			<div>
 				<h4>Companies List</h4>
-				<CompaniesListItem/>
+				<hr/>
+				<table className="table striped responsive-table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Sector</th>
+							<th>Siren</th>
+							<th>Detail</th>
+						</tr>
+					</thead>
+					<tbody>
+						{this.renderCompanies()}
+					</tbody>
+				</table>
 			</div>
 		)
 	}
