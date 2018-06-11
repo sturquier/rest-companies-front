@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css'
 import { HashRouter, Switch, Route, Redirect } from 'react-router-dom'
 import CompaniesList from './companies/CompaniesList'
 import CompanyDetail from './companies/CompanyDetail'
