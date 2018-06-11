@@ -1,10 +1,20 @@
 import React from 'react'
 
-const CompanyContent = () => {
+const CompanyContent = ({company}) => {
 
 	return (
 		<div>
-			<p>Company Content</p>
+			<section>
+				<h4>Detail of {company.name}</h4>
+				<p>Sector : {company.sector}</p>
+				<p>Siren : {company.siren}</p>
+			</section>
+
+			<hr/>
+
+			<section>
+				<h5>Results</h5>
+			</section>
 		</div>
 	)
 }
