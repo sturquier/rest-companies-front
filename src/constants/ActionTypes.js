@@ -1,0 +1,3 @@
+export const GET_COMPANIES
+export const GET_COMPANY
+export const GET_COMPANY_RESULTS
